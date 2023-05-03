@@ -1,0 +1,165 @@
+OOP
+
+OOP (OOP) - programare orientată pe obiecte (Object-Oriented Programming).
+
+O paradigmă de programare este un set general de idei despre cum să structurați un program și să organizați interacțiunea dintre componentele sale.
+
+OOP este acceptat și utilizat ca principală și cel mai adesea ca singură paradigmă de majoritatea limbajelor de programare, inclusiv Java, JavaScript, C #, C ++, Python etc.
+
+Ideea principală a OOP este de a reprezenta un program ca un sistem de obiecte care interacționează din diferite clase.
+Clase
+
+Întregul program este format din clase (clasa), aceste clase interacționează între ele.
+
+Fiecare clasa are:
+
+     metodele sunt acțiuni din această clasă sau asupra acestei clase.
+     atribute - proprietăți ale clasei ca întreg (static) sau un obiect separat.
+
+De obicei, fiecare clasă este descrisă într-un fișier separat.
+Încapsulare
+
+Încapsularea este un mecanism de limbaj care restricționează accesul unor componente ale programului la altele.
+
+Cuvântul „încapsulare” provine din latinescul „in capsula” – „așezarea în cochilie”.
+
+Pentru noi, încapsularea înseamnă scrierea codului în așa fel încât fiecare clasă să fie cât mai independentă și să nu depindă de alte clase.
+
+Structura sa internă nu ar trebui să intereseze pe nimeni și să nu afecteze nimic; fiecare clasă este o „cutie neagră” cu un set de butoane (metode publice).
+Metode
+
+Metodele sunt acțiuni asociate acestei clase.
+
+Toate acțiunile programului, toate comenzile limbajului Java sunt scrise numai în cadrul uneia dintre metode.
+
+Metoda public static void main(String[] args) vă permite să rulați programul pornind de la acest fișier. În acest caz, programul devine o instanță a clasei corespunzătoare acestui fișier și codul programului este format din comenzile enumerate în metoda principală.
+Atribute
+
+Atributele sunt proprietăți ale unei anumite instanțe sau clase ca întreg.
+
+De obicei, atributele nu pot fi modificate direct (din alte clase), ar trebui să fie inaccesibile.
+
+Prin urmare, scriem toate atributele astfel:
+
+privat Tip AttributeName;
+
+Unele tipuri de metode
+Constructorii
+
+Prima metodă a clasei - constructor (constructor) - de la cuvântul "construct" - de a crea.
+
+Numele său este același cu numele clasei. Constructorul nu are niciun tip de returnare.
+
+pisica de clasa publica {
+
+   private Stringname;
+
+   public Cat(String catName) {
+     nume = catName;
+   }
+}
+
+Un constructor fără argument este o metodă care este apelată atunci când un obiect este creat cu operatorul nou.
+
+Un constructor fără argumente este creat automat pentru orice clasă de limbajul Java însuși.
+
+Nu trebuie să-l scrieți - dar puteți dacă doriți să adăugați ceva.
+
+Constructorul cu argumente vă permite să setați atribute imediat după creare (vezi exemplul de mai sus).
+
+De îndată ce am creat un constructor cu argumente, constructorul de sistem fără argumente dispare.
+
+Dacă trebuie să utilizați un constructor fără argumente, va trebui să îl scrieți singur:
+
+pisica de clasa publica {
+
+   private Stringname;
+
+   public Cat() {
+     nume = „Fără nume”;
+   }
+
+   public Cat(String catName) {
+     nume = catName;
+   }
+}
+
+Pot exista mai mulți constructori sau poate fi doar unul. Tu decizi. Constructorii diferă între ei în setul de argumente - numai în tipuri, Java nu acordă atenție numelor.
+
+Cuvântul cheie this vă permite să vă referiți la o anumită instanță de clasă (actuală, aceasta):
+
+pisica de clasa publica {
+
+   private Stringname;
+
+   public Cat() {
+     nume = „Fără nume”;
+   }
+
+   Public Cat(Nume șir) {
+     this.name = nume; // dacă nu scrieți acest lucru, atunci argumentul metodei va fi schimbat, nu atributul obiectului
+   }
+}
+
+Setters
+
+Metodele de schimbare a atributelor sunt de obicei numite setters (setters) din verbul englez set - set (set).
+
+Numele metodei arată în mod tradițional ca public void setAttribute(AttributeType newValue).
+
+Metoda vă permite să setați un atribut dacă nu a fost setat de constructor sau să schimbați unul deja setat.
+
+pisica de clasa publica {
+
+   private Stringname;
+
+   public setName(String catName) {
+     nume = catName;
+   }
+}
+
+Setterii pot avea o verificare suplimentară:
+
+persoană de clasă publică {
+
+   private int age;
+
+   public void setAge(int age) {
+     dacă (vârsta < 0) {
+       System.out.println("Vârsta nu poate fi negativă: " + vârstă);
+       întoarcere;
+     }
+     aceasta.varsta = varsta;
+   }
+}
+
+Setarii sunt creați imediat pentru toate atributele pe care utilizatorul (alt cod) ar trebui să le poată modifica.
+Getters
+
+Deoarece atributele de clasă sunt ascunse accesului direct și sunt accesibile numai prin metode, avem nevoie de gettere - metode care să arate valoarea unui anumit atribut al unei anumite clase.
+
+Numele provine de la verbul englezesc get - to receive.
+
+Numele metodei este în mod tradițional public AttributeType getAttribute().
+
+persoană de clasă publică {
+
+   private int age;
+
+   public void setAge(int age) {
+     dacă (vârsta < 0) {
+       System.out.println("Vârsta nu poate fi negativă: " + vârstă);
+       întoarcere;
+     }
+     aceasta.varsta = varsta;
+   }
+
+   public int getAge() {
+     vârsta de întoarcere;
+   }
+}
+
+Getterele sunt create imediat pentru toate atributele pe care utilizatorul (alt cod) ar trebui să le poată privi.
+Metode și atribute statice.
+
+static - engleză „static”, neconectat

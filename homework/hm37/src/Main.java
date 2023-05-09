@@ -3,8 +3,22 @@ import java.util.Arrays;
 public class Main {
 
   public static void main(String[] args) {
-    Calculator hp = new Calculator(55, 45);
-    System.out.println(hp);
+    int x = 100;
+    int y = 10;
+
+    int sum = Calculator.sum(x, y);
+    int difference = Calculator.difference(x, y);
+    int product = Calculator.product(x, y);
+    double quotient = Calculator.quotient(x, y);
+
+    System.out.println("Sum: " + sum);
+    System.out.println("Difference: " + difference);
+    System.out.println("Product: " + product);
+    System.out.println("Quotient: " + quotient);
+
+
+
+
     System.out.println("The cars what we have: ");
 
     Car car1 = new Car("Audi", 2020);

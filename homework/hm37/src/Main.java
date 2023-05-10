@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -33,6 +35,8 @@ public class Main {
     Car car10 = new Car("Lada", 2023);
 
 
+
+int totalCars = Car.getTotalNumberOfCars();
     System.out.println("Total produced cars: " + Car.getTotalNumberOfCars());
     System.out.println("Price of each car: $" + Car.getPrice());
     car1.increasePrice(650.0);
@@ -47,7 +51,25 @@ public class Main {
 
     System.out.println("New price of each car: $" + Car.getPrice());
 
+
+    List<Car> carList = new ArrayList<>();
+    carList.add(car1);
+    carList.add(car2);
+    carList.add(car3);
+    carList.add(car4);
+    carList.add(car5);
+    carList.add(car6);
+    carList.add(car7);
+    carList.add(car8);
+    carList.add(car9);
+    carList.add(car10);
+
+    for (Car car : carList) {
+      System.out.println(car.getBrand() + " - $" + car.getPrice() + " - " + car.getYear());
+    }
+
+  }
+
   }
 
 
-}

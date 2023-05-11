@@ -5,7 +5,7 @@ class QAengineer extends Employee {
 
   @Override
   public double calculateSalary() {
-    double qaSalaryPercentage = experience * 0.06;
+    double qaSalaryPercentage = experience * 0.05;
     return baseSalary + (baseSalary * qaSalaryPercentage);
   }
 }
